@@ -1,0 +1,84 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-light">
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <a class="navbar-brand" href="#">Navbar</a>
+
+  <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+      <li class="nav-item active">
+        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link" href="#">Link</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+      </li>
+    </ul>
+    <form class="form-inline my-2 my-lg-0">
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+</nav>
+<h1>Manage Quizzes</h1>
+<div class="add-quiz-container">
+  <h3 class="quiz-heading">Select a quiz to edit</h3>
+  
+  <form class="quiz-form">
+    <mat-form-field class="inputScale">
+      <mat-label>Choose Quiz Type</mat-label>
+      <mat-select [(ngModel)]="quizType" name="quizName" required>
+            <mat-option (click)="getQuestions(quiz)" value={{quiz}} *ngFor="let quiz of quizNames">
+              {{quiz}}
+            </mat-option>
+      </mat-select>
+    </mat-form-field>
+
+      <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Type Question" [(ngModel)]="quizQuestion" name="quizQuestion">
+    </mat-form-field>
+    <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Question Answer" [(ngModel)]="quizAnswer" name="quizAnswer">
+    </mat-form-field>
+    <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Option 1" [(ngModel)]="quizOption1" name="quizOption1">
+    </mat-form-field>
+    <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Option 2" [(ngModel)]="quizOption2" name="quizOption2">
+    </mat-form-field>
+    <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Option 3" [(ngModel)]="quizOption3" name="quizOption3">
+    </mat-form-field>
+    <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Option 4" [(ngModel)]="quizOption4" name="quizOption4">
+    </mat-form-field>
+      <button class="submitQuestion" [(ngModel)]="quizType" (click)="addQuestion(quizType)" mat-button>Get Value</button>
+
+    <mat-card class="question-card" *ngFor="let questions of quizQuestions">
+      <div class="questions-div" *ngIf="questions">
+           <mat-card-header>
+        <mat-card-title class="question-title">{{questions.Question}}</mat-card-title>
+      </mat-card-header>
+      <mat-card-content>
+        <h4 class="q-answer">Answer: {{questions.Answer}}</h4>
+        <mat-list role="list">
+          <mat-list-item role="listitem">{{questions.Option1}}</mat-list-item>
+          <mat-list-item role="listitem">{{questions.Option2}}</mat-list-item>
+          <mat-list-item role="listitem">{{questions.Option3}}</mat-list-item>
+          <mat-list-item role="listitem">{{questions.Option4}}</mat-list-item>
+        </mat-list>
+      </mat-card-content>
+      <mat-card-actions>
+        <button (click)="deleteQuestion(questions)" class="delete-q" mat-button>Delete</button>
+      </mat-card-actions>
+      </div>
+   
+    </mat-card>
+
+  </form>
+<!-- </div>
+<button mat-flat-button color="warn" (click)="logout()" class="logoutBtn">
+  <span><mat-icon class="logoutIcon">arrow_back_ios</mat-icon> </span>Logout
+</button> -->

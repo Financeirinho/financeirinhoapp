@@ -1,0 +1,72 @@
+.example-spacer {
+    flex: 1 1 auto;
+  }
+  .example-icon {
+      background: none;
+      border: none;
+      color: white;
+      padding-right: 30px;;
+
+  }
+  mat-list-option {
+      margin-top: 5%;
+  }
+
+  .studentSidenav {
+      display: flex;
+      width: auto;
+      padding: 0px 30px 0px 30px;
+  }
+  .portalTitle {
+    padding: 20px 50px 0px 50px;
+    color: #6485a1;
+  }
+  .titleLine {
+      width: 90%;
+      opacity: 30%;
+  }
+
+  .logoutBtn {
+     position: absolute;
+     bottom: 0;
+     margin-bottom: 10%;
+     border: none;
+     width: auto;
+     height: auto;
+     font-size: 17px;
+     font-weight: 500 !important;
+     color: white;
+     font-weight: 400;
+  }
+
+  .logoutIcon {
+      font-size: 13px;
+  }
+  mat-list-option {
+      color: #767676 !important;
+  }
+  mat-list-option[aria-selected="true"] {
+    background: linear-gradient(90deg, rgba(13,94,149,1) 0%, rgba(8,85,138,1) 100%);
+    color: #F5F5F5 !important;
+    border-radius: 3px;
+  }
+
+  .bg-financeirinho {
+      background-color: #024a70 ;
+  }
+.listOption {
+    text-decoration: none;
+}
+.listOption:visited {
+    color: #767676 ;
+}
+
+
+.navbar-financeirinho{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 8px 16px;
+    background: #00334E!important;
+    box-shadow: 0 3px 5px -1px rgb(0 0 0 / 20%), 0 6px 10px 0 rgb(0 0 0 / 14%), 0 1px 18px 0 rgb(0 0 0 / 12%);
+}
