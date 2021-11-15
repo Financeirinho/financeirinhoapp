@@ -11,10 +11,9 @@
                     <img src="../assets/images/login-1.png" style="width: 125px;" alt="logo">
                     <h4 class="mt-1 mb-5 pb-1">Cadastro - Financeirinho</h4>
                   </div>  
-                  <form class="reg-form">
-        
+                  <form class="reg-form" #form="ngForm"  ngNativeValidate>        
                     <mat-form-field class="inputScale">	
-                      <input required='true' matInput placeholder="Nome Completo" [(ngModel)]="student.fullName" name="studentName">
+                      <input required matInput placeholder="Nome Completo" [(ngModel)]="student.fullName" name="studentName">
                     </mat-form-field>
                     <mat-form-field class="inputScale">
                       <mat-label>Selecione Professor</mat-label>
@@ -24,22 +23,22 @@
                       </mat-select>
                     </mat-form-field>
                     <mat-form-field class="inputScale">	
-                      <input matInput required='true' placeholder="Turma" [(ngModel)]="student.class" name="studentClass">
+                      <input matInput required placeholder="Turma" [(ngModel)]="student.class" name="studentClass">
                     </mat-form-field>
                     <mat-form-field class="inputScale">	
-                      <input matInput required='true' placeholder="Idade" [(ngModel)]="student.yearGroup" name="studentYearGroup">
+                      <input matInput required placeholder="Idade" [(ngModel)]="student.yearGroup" name="studentYearGroup">
                     </mat-form-field>
                     <!--<mat-form-field class="inputScale">	
                       <input matInput required='true' placeholder="Primary Key" [(ngModel)]="student.primaryKey" name="studentPrimaryKey">
                     </mat-form-field>-->
                     <mat-form-field class="inputScale">	
-                      <input matInput required='true' placeholder="Email" [(ngModel)]="student.email" name="studentEmail">
+                      <input matInput required placeholder="Email" [(ngModel)]="student.email" name="studentEmail">
                     </mat-form-field>
                     <mat-form-field class="inputScale">	
-                      <input matInput required='true' type="password" placeholder="Senha" [(ngModel)]="student.password" name="studentPassword">
+                      <input matInput required type="password" placeholder="Senha" [(ngModel)]="student.password" name="studentPassword">
                     </mat-form-field>
                     <br>
-                    <button mat-raised-button color="primary" (click)="createAccount()" class="inputScale">Cadastrar</button>
+                    <button mat-raised-button color="primary" type="submit" (click)="createAccount()" [disabled]="form.invalid" class="inputScale">Cadastrar</button>
                     <div class="d-flex align-items-center justify-content-center mt-2 pb-4">
                       <button mat-stroked-button color="primary" routerLink="/" class="inputScale">Inicio</button>
                       <br/>           

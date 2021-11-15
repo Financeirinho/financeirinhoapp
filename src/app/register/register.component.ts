@@ -5,6 +5,7 @@ import { AngularFirestore, AngularFirestoreCollection } from '@angular/fire/fire
 import { FirebaseService } from '../services/firebase.service';
 import { Router } from '@angular/router';
 import {MatSnackBar} from '@angular/material/snack-bar';
+import { FormGroup } from '@angular/forms';
 
 export class Student {
   fullName: string;
@@ -26,6 +27,8 @@ export class Student {
 export class RegisterComponent implements OnInit {
 
   public student: Student = new Student();
+  
+  contactForm: FormGroup;
 
   constructor(   
     private crudService: FirebaseService,
