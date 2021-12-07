@@ -49,6 +49,7 @@ export class TakeQuizComponent implements OnInit {
                   Option2: x.data().option2,
                   Option3: x.data().option3,
                   Option4: x.data().option4,
+                  imageQuiz: x.data().imageQuiz
                 });
                 console.log(this.quizQuestions);
               });

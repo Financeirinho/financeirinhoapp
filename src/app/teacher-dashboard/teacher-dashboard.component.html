@@ -54,6 +54,9 @@
     <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Option 4" [(ngModel)]="quizOption4" name="quizOption4">
     </mat-form-field>
+    <mat-form-field class="inputScale"> 
+      <input matInput required='true' placeholder="Imagem" [(ngModel)]="imageQuiz" name="imageQuiz">
+    </mat-form-field>
       <button class="submitQuestion" [(ngModel)]="quizType" (click)="addQuestion(quizType)" mat-button>Get Value</button>
 
     <mat-card class="question-card" *ngFor="let questions of quizQuestions">

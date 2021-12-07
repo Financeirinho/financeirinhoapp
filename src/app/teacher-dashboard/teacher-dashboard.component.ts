@@ -44,6 +44,7 @@ export class TeacherDashboardComponent implements OnInit {
   quizOption2: any;
   quizOption3: any;
   quizOption4: any;
+  imageQuiz: any;
   quizQuestions = [];
 
   getQuizName: any;
@@ -66,6 +67,7 @@ export class TeacherDashboardComponent implements OnInit {
       option2: this.quizOption2,
       option3: this.quizOption3,
       option4: this.quizOption4,
+      imageQuiz: this.imageQuiz,
     }
 
     console.log(newQuestion)
@@ -82,6 +84,7 @@ export class TeacherDashboardComponent implements OnInit {
         this.quizOption2 = "";
         this.quizOption3 = "";
         this.quizOption4 = "";
+        this.imageQuiz = "";
       })
       
     } catch (error) {
