@@ -11,6 +11,7 @@ import { StudentPerformanceComponent } from './student-performance/student-perfo
 import { TakeQuizComponent } from './take-quiz/take-quiz.component';
 import { ResultComponent } from './result/result.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
+import { StudentMentoringComponent } from './student-mentoring/student-mentoring.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
@@ -25,6 +26,7 @@ const routes: Routes = [
       { path: 'dashboard', component: StudentDashboardComponent },
       { path: 'quiz', component: StudentQuizComponent },
       { path: 'performance', component: StudentPerformanceComponent },
+      { path: 'mentoring', component: StudentMentoringComponent },      	
       { path: ':ID', component: TakeQuizComponent },
       { path: 'performance/results/:QuizID', component: ResultComponent },
     ],

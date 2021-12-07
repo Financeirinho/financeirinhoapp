@@ -28,7 +28,7 @@ export class TeacherLoginDialogComponent implements OnInit {
 
 
     } else {
-      this.snackBar.open('Incorrect Pass Key', '', {
+      this.snackBar.open('Codigo errado', '', {
         duration: 4000
       });
     }

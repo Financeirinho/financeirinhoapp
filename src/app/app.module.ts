@@ -44,6 +44,7 @@ import { ResultComponent } from './result/result.component';
 import { TeacherLoginDialogComponent } from './teacher-login-dialog/teacher-login-dialog.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { StudentMentoringComponent } from './student-mentoring/student-mentoring.component';
 
 
 const config = {
@@ -55,18 +56,6 @@ const config = {
   messagingSenderId: "626608105136",
   appId: "1:626608105136:web:27aef7dc2c0e4d33387d75"
   };
-  
-  // const config = {
-  //   apiKey: "AIzaSyD8JToLKlfPM66koeT4Giv0uxLJuUvkkhc",
-  //   authDomain: "component-three-omar.firebaseapp.com",
-  //   databaseURL: "https://component-three-omar.firebaseio.com",
-  //   projectId: "component-three-omar",
-  //   storageBucket: "component-three-omar.appspot.com",
-  //   messagingSenderId: "96544207977",
-  //   appId: "1:96544207977:web:33beceeb476bd6491bdef8",
-  //   measurementId: "G-PT5ZMQKTGW"
-  // };
-  
 
 @NgModule({
   declarations: [
@@ -77,6 +66,7 @@ const config = {
     StudentDashboardComponent,
     StudentQuizComponent,
     StudentPerformanceComponent,
+    StudentMentoringComponent,
     TakeQuizComponent,
     ResultComponent,
     TeacherLoginDialogComponent,

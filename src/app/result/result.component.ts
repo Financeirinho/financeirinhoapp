@@ -35,7 +35,7 @@ export class ResultComponent implements OnInit {
 
                 //Declare variable to work through results array 
                 let x = 0;
-                while (x != 10){
+                while (x != 5){
                   this.resultBreakdown.push(
                     {
                       Q: snap.data()[x].Question,
@@ -46,8 +46,8 @@ export class ResultComponent implements OnInit {
                   x++
                 }
 
-                this.score = snap.data()[10].Score
-
+                this.score = snap.data()[5].Score
+                console.log(this.score)
                 console.log(this.resultBreakdown)
               })
             })

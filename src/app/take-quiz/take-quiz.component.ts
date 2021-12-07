@@ -81,14 +81,14 @@ export class TakeQuizComponent implements OnInit {
             this.selectedResponse.push({
               Question: loadQuiz.Question,
               Answer: this.quizResponse,
-              Mark: 'Correct',
+              Mark: 'Correto',
             });
           } else {
             //If Incorrect then Mark as Incorrect and push into Array
             this.selectedResponse.push({
               Question: loadQuiz.Question,
               Answer: this.quizResponse,
-              Mark: 'Incorrect',
+              Mark: 'Errado',
             });
           }
         }
@@ -106,7 +106,7 @@ export class TakeQuizComponent implements OnInit {
     try {
       //Get score percentage add to responses
       for (let i = 0; i < this.selectedResponse.length; i++) {
-        if (this.selectedResponse[i].Mark == 'Correct') {
+        if (this.selectedResponse[i].Mark == 'Correto') {
           this.correctAnswer++;
         }
       }
