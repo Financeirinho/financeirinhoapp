@@ -15,7 +15,15 @@
     <mat-step *ngFor="let loadQuiz of quizQuestions" completed="false">
         <h2>{{loadQuiz.Question}}</h2>
         <mat-selection-list [multiple]="false" [(ngModel)]="quizResponse">
-          <img class="img-fluid" [src]="loadQuiz.imageQuiz"/>
+       
+          <body>
+            <center>
+              <img class="img-fluid" [src]="loadQuiz.imageQuiz"/>
+            </center>
+          </body>
+
+
+         
             <mat-list-option [value]="loadQuiz.Option1">
               {{loadQuiz.Option1}}
      
