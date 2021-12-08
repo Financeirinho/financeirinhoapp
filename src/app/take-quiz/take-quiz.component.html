@@ -21,22 +21,24 @@
               <img class="img-fluid" [src]="loadQuiz.imageQuiz"/>
             </center>
           </body>
+          <br>
 
 
          
             <mat-list-option [value]="loadQuiz.Option1">
               {{loadQuiz.Option1}}
-     
             </mat-list-option>
+            <br>
             <mat-list-option [value]="loadQuiz.Option2">
               {{loadQuiz.Option2}}
             </mat-list-option>
-            <mat-list-option [value]="loadQuiz.Option3">
+            <br>
+            <!--<mat-list-option [value]="loadQuiz.Option3">
               {{loadQuiz.Option3}}
             </mat-list-option>
             <mat-list-option [value]="loadQuiz.Option4">
               {{loadQuiz.Option4}}
-            </mat-list-option>
+            </mat-list-option>-->
             <!-- <button class="selectAnswer" (click)="getResponse($event, loadQuiz)" mat-button>Submit Answer</button> -->
         </mat-selection-list>
         <button class="nxtBtn" (click)="getResponse($event, loadQuiz)" mat-button matStepperNext>Next</button>
