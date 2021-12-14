@@ -16,6 +16,7 @@ export class TakeQuizComponent implements OnInit {
   quizQuestions = [];
   selectedResponse = [];
   quizResponse: string;
+  StepValidate: boolean = true;
   correctAnswer = 0;
   score: any;
 
@@ -72,6 +73,7 @@ export class TakeQuizComponent implements OnInit {
   //Get Students Answer for the Quiz
 
   getResponse(event, loadQuiz) {
+    console.log('evento ============', event)
     try {
       this.quizQuestions.forEach((element) => {
         //Target the question being asked
@@ -92,6 +94,8 @@ export class TakeQuizComponent implements OnInit {
               Mark: 'Errado',
             });
           }
+
+          this.StepValidate = true;
         }
       });
 
@@ -99,6 +103,11 @@ export class TakeQuizComponent implements OnInit {
     } catch (error) {
       console.log(error.message);
     }
+  }
+
+  validateStep(){
+    this.StepValidate = false;
+    console.log('passou pela validacao =============')
   }
 
   //Add Quiz results to Database
@@ -113,7 +122,7 @@ export class TakeQuizComponent implements OnInit {
       }
 
       //Calculate percentage of the score
-      this.score = (this.correctAnswer / 10) * 100 + '%';
+      this.score = (this.correctAnswer / 5) * 100 + ' Pontos';
 
       this.selectedResponse.push({ Score: this.score });
 

@@ -65,8 +65,6 @@ export class TeacherDashboardComponent implements OnInit {
       answer: this.quizAnswer,
       option1: this.quizOption1,
       option2: this.quizOption2,
-      option3: this.quizOption3,
-      option4: this.quizOption4,
       imageQuiz: this.imageQuiz,
     }
 
@@ -82,8 +80,7 @@ export class TeacherDashboardComponent implements OnInit {
         this.quizAnswer = "";
         this.quizOption1 = "";
         this.quizOption2 = "";
-        this.quizOption3 = "";
-        this.quizOption4 = "";
+
         this.imageQuiz = "";
       })
       
@@ -108,9 +105,7 @@ export class TeacherDashboardComponent implements OnInit {
           Question: x.data().question,
           Answer: x.data().answer,
           Option1: x.data().option1,
-          Option2: x.data().option2,
-          Option3: x.data().option3,
-          Option4: x.data().option4,
+          Option2: x.data().option2
         });
        // console.log(this.quizQuestions);
       });

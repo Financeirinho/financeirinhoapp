@@ -51,76 +51,22 @@ export class LoginComponent implements OnInit {
       if (r) {
         console.log(firebase.default.auth().currentUser.uid);
 
-        console.log('Successfully logged in!');
+        console.log('Logado com sucesso!');
         //If student route to Student Portal
         this.route.navigate(['student']);
 
         //Show success prompt
-        this.snackBar.open('Login Succesful', '', {
+        this.snackBar.open('Sucesso ao logar!', '', {
           duration: 4000,
         });
       }
     } catch (err) {
       console.error(err);
       // Prompt any error messages
-      this.snackBar.open(err.message, '', {
+      this.snackBar.open('Error ao logar!', 'Login ou senha incorretos.', {
         duration: 4000,
       });
     }
   }
 
-  // generateStudents() {
-  //   let teachers = [
-  //     'Ms Hamid',
-  //     'Mrs Alexander-Stafford',
-  //     'Mr Yeboah',
-  //     'Mr Azim',
-  //   ];
-
-  //   let x = 0;
-  //   while (x != 10) {
-  //     let teacher = teachers[Math.floor(Math.random() * teachers.length)];
-
-  //     let student = {
-  //       FullName: 'Student ' + [x],
-  //       Teacher: teacher,
-  //       Class: '8.' + [x],
-  //       YearGroup: '8',
-  //       PrimaryKey: 'ST' + Math.floor(1000 + Math.random() * 9000),
-  //       Email: 'student' + [x] + '@gmail.com',
-  //       Password: '123456',
-  //       StudentID: 'student' + [x] + Math.floor(Date.now() / 1000),
-  //     };
-
-  //     this.dummy.push(student);
-
-  //     x++;
-  //   }
-  //     console.log(this.dummy)
-
-  //     this.addDummy()
-  // }
-
-  // addDummy(){
-
-  //   let db = firebase.firestore();
-  //       try {
-
-  //         for (let i=0; i<this.dummy.length; i++){
-
-  //           this.fAuth.createUserWithEmailAndPassword(
-  //             this.dummy[i].Email,
-  //             this.dummy[i].Password
-  //           )
-  //           db.collection('Students').add(this.dummy[i]);
-
-  //         }
-      
-  //   } catch (error) {
-
-  //     console.log(error.message)
-      
-  //   }
-
-  // }
 }

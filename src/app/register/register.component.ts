@@ -11,7 +11,7 @@ export class Student {
   fullName: string;
   teacher: string;
   class: string;
-  yearGroup: string;
+  school: string;
   primaryKey: string;
   email: string;
   password: string;
@@ -29,7 +29,8 @@ export class RegisterComponent implements OnInit {
   public student: Student = new Student();
   
   contactForm: FormGroup;
-
+  db = firebase.default.firestore();
+  teacherList = [];
   constructor(   
     private crudService: FirebaseService,
     private route: Router,
@@ -37,6 +38,20 @@ export class RegisterComponent implements OnInit {
     private snackBar: MatSnackBar) { }
 
   ngOnInit(): void {
+    this.db
+    .collection('Teacher')
+    .get()
+    .then((snapshot) => {
+      snapshot.docs.forEach((docs) => {
+        console.log('5estetetttt    ======================   ', docs.data().FullName);
+        this.teacherList.push(
+          
+            docs.data().FullName
+          )
+          console.log('lista ==========', this.teacherList);
+      });
+    });
+
   }
   async createAccount() {
     try {
@@ -50,7 +65,7 @@ export class RegisterComponent implements OnInit {
         record['FullName'] = this.student.fullName;
         record['Teacher'] = this.student.teacher;
         record['Class'] = this.student.class;
-        record['YearGroup'] = this.student.yearGroup;
+        record['School'] = this.student.school;
         //record['PrimaryKey'] = this.student.primaryKey;
         record['Email'] = this.student.email;
         record['Password'] = this.student.password;
@@ -61,7 +76,7 @@ export class RegisterComponent implements OnInit {
           this.student.fullName = "";
           this.student.teacher = "";
           this.student.class = "";
-          this.student.yearGroup = "";
+          this.student.school = "";
           //this.student.primaryKey = "";
           this.student.email = "";
           this.student.password = "";
@@ -69,6 +84,9 @@ export class RegisterComponent implements OnInit {
           console.log(resp);
         })
         console.log('Successfully registered!');
+        this.snackBar.open('Account Created', '', {
+          duration: 4000
+        });
         this.route.navigate(['']);
       }
 

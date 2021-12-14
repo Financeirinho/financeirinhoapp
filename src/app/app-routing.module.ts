@@ -12,12 +12,14 @@ import { TakeQuizComponent } from './take-quiz/take-quiz.component';
 import { ResultComponent } from './result/result.component';
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 import { StudentMentoringComponent } from './student-mentoring/student-mentoring.component';
+import { RegisterTeacherComponent } from './register-teacher/register-teacher.component';
+import { LoginTeacherComponent } from './login-teacher/login-teacher.component';
 
 const routes: Routes = [
   { path: '', component: LoginComponent },
   { path: 'register', component: RegisterComponent },
-  { path: 'teacher-dashboard', 
-  component: TeacherDashboardComponent },
+  { path: 'register-teacher', component: RegisterTeacherComponent },
+  { path: 'login-teacher', component: LoginTeacherComponent },
 
   {
     path: 'student',
@@ -30,6 +32,10 @@ const routes: Routes = [
       { path: ':ID', component: TakeQuizComponent },
       { path: 'performance/results/:QuizID', component: ResultComponent },
     ],
+  },
+  {
+    path: 'teacher',
+    component: TeacherDashboardComponent,
   },
 ];
 

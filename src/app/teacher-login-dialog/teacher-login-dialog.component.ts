@@ -24,7 +24,7 @@ export class TeacherLoginDialogComponent implements OnInit {
    // this.router.navigate(['teacher-dashboard'])
 
     if (this.teacherPassKey == this.passKey){
-      this.router.navigate(['teacher-dashboard'])
+      this.router.navigate(['login-teacher'])
 
 
     } else {

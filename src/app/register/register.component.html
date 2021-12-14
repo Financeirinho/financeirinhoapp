@@ -18,17 +18,21 @@
                     <mat-form-field class="inputScale">
                       <mat-label>Selecione Professor</mat-label>
                       <mat-select [(ngModel)]="student.teacher" name="studentTeacher" required>
-                        <mat-option value='Daniella Mafra'>Daniella Mafra</mat-option>
-                        <mat-option value='Arlindo Batista'>Arlindo Batista</mat-option>
-                        <mat-option value='Arlindo Batista'>Carlos José</mat-option>
+                        <mat-option *ngFor="let nome of teacherList" [value]="nome">{{nome}}</mat-option>
+                    
                       </mat-select>
                     </mat-form-field>
                     <mat-form-field class="inputScale">	
                       <input matInput required placeholder="Turma" [(ngModel)]="student.class" name="studentClass">
                     </mat-form-field>
-                    <mat-form-field class="inputScale">	
-                      <input matInput required placeholder="Idade" [(ngModel)]="student.yearGroup" name="studentYearGroup">
-                    </mat-form-field>
+                    <mat-form-field class="inputScale">
+                      <mat-label>Selecione a Escola</mat-label>
+                    <mat-select [(ngModel)]="student.school" name="studentSchool" required>
+                      <mat-option value='Lorem Impsu'>Lorem Impsu</mat-option>
+                      <mat-option value='Lorem Impsu'>Lorem Impsu</mat-option>
+                      <mat-option value='Lorem Impsu'>Lorem Impsu</mat-option>
+                    </mat-select>
+                  </mat-form-field>
                     <!--<mat-form-field class="inputScale">	
                       <input matInput required='true' placeholder="Primary Key" [(ngModel)]="student.primaryKey" name="studentPrimaryKey">
                     </mat-form-field>-->

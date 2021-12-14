@@ -1,0 +1,41 @@
+<section class=" login">
+  <div class="container py-5  ">
+    <div class="row d-flex justify-content-center align-items-center">
+      <div class="col-xl-6">
+        <div class="card rounded-3 text-black">
+          <div class="row g-0">
+            <div class="col-lg-12">
+              <div class="card-body p-md-5 mx-md-4">
+                <div class="text-center">
+                  <img src="../assets/images/loginProfessor.png" style="width: 145px;" alt="logo">
+                  <h4 class="mt-1 mb-5 pb-1">Acesso Professor</h4>
+                  <p>Por favor acesse sua conta</p>
+                </div>
+                <form>
+                 
+                  <mat-form-field class="inputScale">
+                    <input matInput placeholder="Email" [(ngModel)]="teacher.email" name="teacherEmail">
+                  </mat-form-field>
+                  <mat-form-field class="inputScale">
+                    <input type="password" matInput placeholder="Senha" [(ngModel)]="teacher.password"
+                      name="teacherPassword">
+                  </mat-form-field>
+
+                  <div class="text-center pt-1">
+                    <button mat-raised-button color="primary" (click)="login()" class="inputScale">Login</button>
+                  </div>
+                  
+                  <div class="text-center pt-1 mb-5 pb-1">
+                   
+                    <button mat-stroked-button color="primary" routerLink="/register-teacher"
+                      class="inputScale mt-1">Cadastrar</button>
+                  </div>               
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

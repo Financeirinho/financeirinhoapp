@@ -35,6 +35,7 @@ import { AngularFireStorageModule } from '@angular/fire/storage';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { LoginComponent } from './login/login.component';
 import { RegisterComponent } from './register/register.component';
+import { RegisterTeacherComponent } from './register-teacher/register-teacher.component';
 import { StudentPortalComponent } from './student-portal/student-portal.component';
 import { StudentDashboardComponent } from './student-dashboard/student-dashboard.component';
 import { StudentQuizComponent } from './student-quiz/student-quiz.component';
@@ -45,6 +46,7 @@ import { TeacherLoginDialogComponent } from './teacher-login-dialog/teacher-logi
 import { TeacherDashboardComponent } from './teacher-dashboard/teacher-dashboard.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { StudentMentoringComponent } from './student-mentoring/student-mentoring.component';
+import { LoginTeacherComponent } from './login-teacher/login-teacher.component';
 
 
 const config = {
@@ -61,7 +63,9 @@ const config = {
   declarations: [
     AppComponent,
     LoginComponent,
+    LoginTeacherComponent,
     RegisterComponent,
+    RegisterTeacherComponent,
     StudentPortalComponent,
     StudentDashboardComponent,
     StudentQuizComponent,

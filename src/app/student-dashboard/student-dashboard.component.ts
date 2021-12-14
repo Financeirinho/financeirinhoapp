@@ -25,7 +25,7 @@ export class StudentDashboardComponent implements OnInit {
   studentName: string;
   studentTeacher: string;
   studentClass: string;
-  studentYearGroup: string;
+  school: string;
 
   ngOnInit(): void {
     //Get Student Name
@@ -38,8 +38,9 @@ export class StudentDashboardComponent implements OnInit {
           this.studentName = doc.data().FullName;
           this.studentTeacher = doc.data().Teacher;
           this.studentClass = doc.data().Class;
-          this.studentYearGroup = doc.data().YearGroup;
+          this.school = doc.data().School;
         });
       });
+
   }
 }
