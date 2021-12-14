@@ -60,7 +60,7 @@ export class RegisterTeacherComponent implements OnInit {
           console.log(resp);
         })
         console.log('Successfully registered!');
-        this.route.navigate(['']);
+        this.route.navigate(['teacher-login']);
       }
 
     } catch (err) {
