@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "component-three-omar": {
+    "financeirinhoapp": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "docs",
+            "outputPath": "dist/financeirinhoapp",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -71,18 +71,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "component-three-omar:build"
+            "browserTarget": "financeirinhoapp:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "component-three-omar:build:production"
+              "browserTarget": "financeirinhoapp:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "component-three-omar:build"
+            "browserTarget": "financeirinhoapp:build"
           }
         },
         "test": {
@@ -123,17 +123,17 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "component-three-omar:serve"
+            "devServerTarget": "financeirinhoapp:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "component-three-omar:serve:production"
+              "devServerTarget": "financeirinhoapp:serve:production"
             }
           }
         }
       }
     }},
-  "defaultProject": "component-three-omar"
+  "defaultProject": "financeirinhoapp"
 
 
 }
