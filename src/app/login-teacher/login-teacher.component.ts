@@ -26,16 +26,16 @@ export class LoginTeacherComponent implements OnInit {
   dummy = [];
 
   public teacher: Teacher = new Teacher();
-  
+
 
   constructor(
     private route: Router,
     public fAuth: AngularFireAuth,
     private snackBar: MatSnackBar,
     public dialog: MatDialog
-  ) {}
+  ) { }
 
-  ngOnInit(): void {}
+  ngOnInit(): void { }
 
   openDialog() {
     this.dialog.open(TeacherLoginDialogComponent);
