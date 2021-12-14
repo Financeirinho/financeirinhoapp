@@ -13,16 +13,16 @@
     </mat-form-field>
 
     <mat-form-field class="inputScale">
-      <input matInput required='true' placeholder="Type Question" [(ngModel)]="quizQuestion" name="quizQuestion">
+      <input matInput required='true' placeholder="Tipo de Quizz" [(ngModel)]="quizQuestion" name="quizQuestion">
     </mat-form-field>
     <mat-form-field class="inputScale">
-      <input matInput required='true' placeholder="Question Answer" [(ngModel)]="quizAnswer" name="quizAnswer">
+      <input matInput required='true' placeholder="Resposta" [(ngModel)]="quizAnswer" name="quizAnswer">
     </mat-form-field>
     <mat-form-field class="inputScale">
-      <input matInput required='true' placeholder="Option 1" [(ngModel)]="quizOption1" name="quizOption1">
+      <input matInput required='true' placeholder="Opção 1" [(ngModel)]="quizOption1" name="quizOption1">
     </mat-form-field>
     <mat-form-field class="inputScale">
-      <input matInput required='true' placeholder="Option 2" [(ngModel)]="quizOption2" name="quizOption2">
+      <input matInput required='true' placeholder="Opção 2" [(ngModel)]="quizOption2" name="quizOption2">
     </mat-form-field>
     <!-- <mat-form-field class="inputScale"> 
       <input matInput required='true' placeholder="Option 3" [(ngModel)]="quizOption3" name="quizOption3">
@@ -33,7 +33,7 @@
     <mat-form-field class="inputScale">
       <input matInput required='true' placeholder="Imagem" [(ngModel)]="imageQuiz" name="imageQuiz">
     </mat-form-field>
-    <button class="submitQuestion" [(ngModel)]="quizType" (click)="addQuestion(quizType)" mat-button>Get Value</button>
+    <button class="submitQuestion" [(ngModel)]="quizType" (click)="addQuestion(quizType)" mat-button>Salvar</button>
 
     <mat-card class="question-card" *ngFor="let questions of quizQuestions">
       <div class="questions-div" *ngIf="questions">
@@ -44,13 +44,14 @@
           <h4 class="q-answer">Resposta: {{questions.Answer}}</h4>
           <mat-list role="list">
             <mat-list-item role="listitem">{{questions.Option1}}</mat-list-item>
+            <br/>
             <mat-list-item role="listitem">{{questions.Option2}}</mat-list-item>
             <!-- <mat-list-item role="listitem">{{questions.Option3}}</mat-list-item> -->
             <!-- <mat-list-item role="listitem">{{questions.Option4}}</mat-list-item> -->
           </mat-list>
         </mat-card-content>
         <mat-card-actions>
-          <button (click)="deleteQuestion(questions)" mat-raised-button color="danger" class="delete-q"
+          <button (click)="deleteQuestion(questions)" mat-raised-button color="warn" class="delete-q"
             mat-button>Deletar</button>
         </mat-card-actions>
       </div>
